@@ -44,13 +44,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
-export function HydrateFallback({
-  loaderData,
-}: Route.ComponentProps) {
-  return (
-    <h1>Loading version {loaderData.version}...</h1>
-  );
-}
+// export function HydrateFallback({
+//   loaderData,
+// }: Route.ComponentProps) {
+//   return (
+//     <h1>Loading version {loaderData.version}...</h1>
+//   );
+// }
 
 export default function App() {
   return <Outlet />;
