@@ -16,7 +16,6 @@ export async function loader() {
   };
 }
 
-const ASSET_URL = process.env.ASSET_URL || '';
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -27,10 +26,6 @@ export const links: Route.LinksFunction = () => [
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
-  {
-    rel: "icon",
-    href: `${ASSET_URL}favicon.ico`,
   },
 ];
 
