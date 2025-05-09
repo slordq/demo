@@ -9,11 +9,11 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-export async function loader() {
-  return {
-    version: 'xxx', //await getVersion(),
-  };
-}
+// export async function loader() {
+//   return {
+//     version: 'xxx', //await getVersion(),
+//   };
+// }
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
