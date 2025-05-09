@@ -28,7 +28,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "icon",
-    href: "%PUBLIC_URL%/favicon.ico",
+    href: "/favicon.ico",
   },
 ];
 
