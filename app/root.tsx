@@ -9,12 +9,14 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import Home from "./routes/home";
+
 export async function loader() {
   return {
-    version: 'xxx', //await getVersion(),
+    version: '0.1', //await getVersion(),
   };
 }
+
+const ASSET_URL = process.env.ASSET_URL || '';
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -28,7 +30,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "icon",
-    href: "favicon.ico",
+    href: `${ASSET_URL}favicon.ico`,
   },
 ];
 
@@ -53,7 +55,8 @@ export function HydrateFallback({
   loaderData,
 }: Route.ComponentProps) {
   return (
-    <Layout><Home /></Layout>
+    // <Layout><Home /></Layout>
+    <h1>Loading {loaderData.version}</h1>
   );
 }
 
