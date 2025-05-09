@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import Home from "./routes/home";
 export async function loader() {
   return {
     version: 'xxx', //await getVersion(),
@@ -48,7 +49,7 @@ export function HydrateFallback({
   loaderData,
 }: Route.ComponentProps) {
   return (
-    <h1>Loading version {loaderData.version}...</h1>
+    <Layout><Home /></Layout>
   );
 }
 
